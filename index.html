@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Be My Valentine?</title>
+    <style>
+        body {
+            text-align: center;
+            font-family: Arial, sans-serif;
+            background-color: #ffdde1;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            margin-top: 100px;
+        }
+        h1 {
+            color: #ff4d6d;
+            font-size: 40px;
+        }
+        p {
+            font-size: 20px;
+            color: #333;
+        }
+        .heart {
+            font-size: 50px;
+            color: red;
+        }
+        .buttons {
+            margin-top: 20px;
+        }
+        button {
+            font-size: 18px;
+            padding: 10px 20px;
+            margin: 10px;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        .yes-btn {
+            background-color: #ff4d6d;
+            color: white;
+        }
+        .no-btn {
+            background-color: #ccc;
+            color: black;
+            position: absolute;
+        }
+    </style>
+    <script>
+        function moveNoButton() {
+            let x = Math.random() * (window.innerWidth - 100);
+            let y = Math.random() * (window.innerHeight - 50);
+            document.getElementById("no-btn").style.left = x + "px";
+            document.getElementById("no-btn").style.top = y + "px";
+        }
+
+        function sayYes() {
+            document.getElementById("message").innerHTML = "Yay! I can't wait to spend Valentine's with you!🩷";
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <h1>Will You Be My Valentine?🩷</h1>
+        <p>You make my heart smile! Please say yes!</p>
+        <div class="buttons">
+            <button class="yes-btn" onclick="sayYes()">Yes!</button>
+            <button class="no-btn" id="no-btn" onmouseover="moveNoButton()">No</button>
+        </div>
+        <p id="message" class="heart"></p>
+        <img src="/92dc786cb923c383cae7ae91e9a55a50.jpg" alt="dog with a flower" width="350" heigh="250">
+    </div>
+</body>
+</html>
